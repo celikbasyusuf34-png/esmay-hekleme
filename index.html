@@ -121,7 +121,7 @@
 </head>
 <body>
 
-    <h1 id="soruMetni">Esma Yusuf'a Instagram hesabını verecek mi?</h1>
+    <h1 id="soruMetni">Instagram hesabını verir misin yavrum?</h1>
 
     <div class="buttons" id="butonAlani">
         <button id="evetBtn" onclick="evetTiklandi()">Evet</button>
@@ -129,7 +129,7 @@
     </div>
 
     <div class="sonuc-kapsayici" id="sonucAlani">
-        <div class="sonuc-mesaj">Biz de öyle düşünmüştük 😄<br>Şimdi Yusuf'a şifreni gönder! 🔑</div>
+        <div class="sonuc-mesaj">Bende öyle düşünmüştüm 😄<br>Şimdi şifreni gönder bakim güzelim! 🔑</div>
         <div class="kalpli-yazi">
             Seni Seviyorum ❤️
             <!-- Etraftaki yüzen kalpler -->
@@ -150,12 +150,10 @@
         let tiklamaSayisi = 0;
 
         function kacir(e) {
-            // Mobilde tıklama anında sayfanın kaymasını/zoom olmasını engelle
             if (e) e.preventDefault();
 
             tiklamaSayisi++;
 
-            // Her "Hayır" denildiğinde Evet butonunu büyüt
             let yeniBoyut = 1 + (tiklamaSayisi * 0.25);
             let yeniPaddingV = 12 + (tiklamaSayisi * 4);
             let yeniPaddingH = 25 + (tiklamaSayisi * 8);
@@ -163,7 +161,6 @@
             evetBtn.style.fontSize = yeniBoyut + 'rem';
             evetBtn.style.padding = `${yeniPaddingV}px ${yeniPaddingH}px`;
 
-            // Telefonda ekran sınırları içinde rastgele kaçma koordinatları
             const maxX = window.innerWidth - hayirBtn.offsetWidth - 40;
             const maxY = window.innerHeight - hayirBtn.offsetHeight - 40;
 
